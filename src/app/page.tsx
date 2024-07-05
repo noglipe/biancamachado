@@ -1,13 +1,10 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
 
 import { PainelFotos } from "@/components/painelFotos";
 
-import fotoPerfil from '@/assets/perfil.jpg'
-
-import { BsInstagram } from "react-icons/bs";
-import { SiWhatsapp } from "react-icons/si";
-import Link from "next/link";
+import { FotoPerfil } from "@/components/fotoPerfil";
+import { RedesSociais } from "@/components/redesSociais";
 
 export default function Home() {
   return (
@@ -15,14 +12,7 @@ export default function Home() {
 
       <div className={styles.container} >
         <div className={styles.apresentacao} >
-          <div className={styles.foto} >
-            <Image
-              src={fotoPerfil}
-              alt={"Foto perfil Bianca "}
-              layout="responsive"
-              style={{ minWidth: 150, minHeight: 150, maxWidth: 200, maxHeight: 200, borderRadius: 100 }}
-            />
-          </div>
+          <FotoPerfil />
           <div className={styles.info} >
             <h1 className={styles.titulo}>
               <span className={styles.hello}><strong>Hello!</strong> </span>
@@ -36,12 +26,7 @@ export default function Home() {
                 e te ajudar no que for preciso!</p>
               <br />
             </div>
-            <div className={styles.redesSociais}>
-              <Link href="https://wa.me/5527981655844" target='_blank'><SiWhatsapp size={30} color="green" /></Link >
-              <Link href="https://www.instagram.com/biancamachadophoto/" target='_blank'>
-                <BsInstagram size={30} />
-              </Link >
-            </div >
+            <RedesSociais />
           </div>
 
         </div>

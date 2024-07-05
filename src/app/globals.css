@@ -81,7 +81,9 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background-image: url('../assets/fundo.jpg');
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
+
 }
 
 a {

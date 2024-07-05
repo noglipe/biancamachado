@@ -1,0 +1,24 @@
+.redesSociais {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+}
+
+.redesSociais a {
+    margin-right: 16px;
+}
+
+.redesSociais a:hover {
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .redesSociais {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
