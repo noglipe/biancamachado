@@ -140,6 +140,130 @@ export function PainelFotos() {
                 />
             </div>
 
+
+
+
+            {/* Painel 1 */}
+            <div className={styles.coluna}>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto1}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto2}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+
+            </div>
+            <div className={styles.coluna}>
+                <div className={styles.foto2x2}>
+                    <Image
+                        src={foto3}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+            </div>
+
+            {/* Painel interemediario */}
+            <div className={styles.box1}>
+                <Image
+                    src={foto4}
+                    alt="Foto do Painel de Fotos"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
+
+            {/* Painel 2 */}
+            <div className={styles.coluna}>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto5}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto6}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+
+            </div>
+            <div className={styles.coluna}>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto7}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto8}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+            </div>
+
+
+            {/* Painel 3 */}
+            <div className={styles.coluna}>
+                <div className={styles.foto2x2}>
+                    <Image
+                        src={foto9}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+            </div>
+            <div className={styles.coluna}>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto10}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div className={styles.foto1x1}>
+                    <Image
+                        src={foto11}
+                        alt="Foto do Painel de Fotos"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+
+            </div>
+
+            {/* Painel interemediario */}
+            <div className={styles.box1}>
+                <Image
+                    src={foto12}
+                    alt="Foto do Painel de Fotos"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
         </div>
     );
 }
