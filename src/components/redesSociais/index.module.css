@@ -12,6 +12,25 @@
     cursor: pointer;
 }
 
+.instagramIcon {
+    display: inline-block;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 8px;
+}
+
+.whatsappIcon {
+    display: inline-block;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    border-radius: 8px;
+}
+
+.icon {
+    height: 20px;
+    margin-top: 5px;
+    color: white;
+    background: transparent;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
 
