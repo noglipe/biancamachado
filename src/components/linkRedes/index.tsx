@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import { useEffect, useState } from 'react';
 import { parse } from 'next-useragent';
+import Links from '../links/links';
 
 export function LinkRedes() {
 
@@ -21,26 +22,23 @@ export function LinkRedes() {
     return (
         <div className={styles.link}>
 
+
             {isMobile ? (
                 <>
                     <Link href=" whatsapp://send?phone=5527981655844" target='_blank'>
-                        <SiWhatsapp size={45} />
-                        <p>Orçamentos</p>
+                        <Links icone={SiWhatsapp} descricao="Orçamentos" />
                     </Link>
                     <Link href="instagram://user?username=biancamachadophoto" target='_blank'>
-                        <BsInstagram size={45} />
-                        <p>Conheça Meu Trabalho</p>
+                        <Links icone={BsInstagram} descricao="Conheça Meu Trabalho" />
                     </Link>
                 </>
             ) : (
                 <>
                     <Link href="https://wa.me/5527981655844" target='_blank'>
-                        <SiWhatsapp size={40} />
-                        <p>Orçamentos</p>
+                        <Links icone={SiWhatsapp} descricao="Orçamentos" />
                     </Link>
                     <Link href="https://www.instagram.com/biancamachadophoto/" target='_blank'>
-                        <BsInstagram size={40} />
-                        <p>Conheça Meu Trabalho</p>
+                        <Links icone={BsInstagram} descricao="Conheça Meu Trabalho" />
                     </Link>
                 </>
             )

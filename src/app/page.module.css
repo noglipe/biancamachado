@@ -82,8 +82,12 @@
     margin-left: 16px;
   }
 
+  .titulo {
+    max-width: 300px;
+  }
+
   .subtitulo {
-    max-width: 400px;
+    max-width: 300px;
   }
 
 }

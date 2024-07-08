@@ -1,7 +1,7 @@
 .painel {
   position: absolute;
   top: 0;
-  right: calc((100vw - 1024px)/2);
+  right: calc((100vw - 1024px) / 2);
 
   width: 280px;
   height: 100%;
@@ -49,18 +49,14 @@
 
 /* Mobile */
 @media (max-width: 800px) {
-
   .painel {
     display: none;
   }
-
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 801px) and (max-width: 1120px) {
-
   .painel {
     right: 30px;
   }
-
 }

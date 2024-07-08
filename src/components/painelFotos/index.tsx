@@ -1,4 +1,7 @@
-import styles from "./index.module.css";
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import styles from './index.module.css';
 import Image from 'next/image';
 
 import foto1 from '@/assets/1.jpg';
@@ -17,252 +20,120 @@ import foto12 from '@/assets/12.jpg';
 export function PainelFotos() {
     return (
         <div className={styles.painel}>
-
             {/* Painel 1 */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto1}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto1} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto2}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto2} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto2x2}>
-                    <Image
-                        src={foto3}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto3} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
 
-            {/* Painel interemediario */}
+            {/* Painel intermediário */}
             <div className={styles.box1}>
-                <Image
-                    src={foto4}
-                    alt="Foto do Painel de Fotos"
-                    layout="fill"
-                    objectFit="cover"
-                />
+                <Image src={foto4} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
             </div>
 
             {/* Painel 2 */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto5}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto5} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto6}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto6} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto7}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto7} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto8}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto8} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
-
 
             {/* Painel 3 */}
             <div className={styles.coluna}>
                 <div className={styles.foto2x2}>
-                    <Image
-                        src={foto9}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto9} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto10}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto10} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto11}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto11} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
 
-            {/* Painel interemediario */}
+            {/* Painel intermediário */}
             <div className={styles.box1}>
-                <Image
-                    src={foto12}
-                    alt="Foto do Painel de Fotos"
-                    layout="fill"
-                    objectFit="cover"
-                />
+                <Image src={foto12} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
             </div>
 
-
-
-
-            {/* Painel 1 */}
+            {/* Painel 1 (Repetido para rolagem infinita) */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto1}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto1} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto2}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto2} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto2x2}>
-                    <Image
-                        src={foto3}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto3} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
 
-            {/* Painel interemediario */}
+            {/* Painel intermediário (Repetido para rolagem infinita) */}
             <div className={styles.box1}>
-                <Image
-                    src={foto4}
-                    alt="Foto do Painel de Fotos"
-                    layout="fill"
-                    objectFit="cover"
-                />
+                <Image src={foto4} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
             </div>
 
-            {/* Painel 2 */}
+            {/* Painel 2 (Repetido para rolagem infinita) */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto5}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto5} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto6}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto6} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto7}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto7} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto8}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto8} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
 
-
-            {/* Painel 3 */}
+            {/* Painel 3 (Repetido para rolagem infinita) */}
             <div className={styles.coluna}>
                 <div className={styles.foto2x2}>
-                    <Image
-                        src={foto9}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto9} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
             </div>
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto10}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto10} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
                 <div className={styles.foto1x1}>
-                    <Image
-                        src={foto11}
-                        alt="Foto do Painel de Fotos"
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                    <Image src={foto11} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
                 </div>
-
             </div>
 
-            {/* Painel interemediario */}
+            {/* Painel intermediário (Repetido para rolagem infinita) */}
             <div className={styles.box1}>
-                <Image
-                    src={foto12}
-                    alt="Foto do Painel de Fotos"
-                    layout="fill"
-                    objectFit="cover"
-                />
+                <Image src={foto12} alt="Foto do Painel de Fotos" layout="fill" objectFit="cover" />
             </div>
         </div>
     );
