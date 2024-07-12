@@ -18,11 +18,61 @@ import foto11 from '@/assets/11.jpg';
 import foto12 from '@/assets/12.jpg';
 
 export function PainelFotos() {
+    const scrollingContentRef = useRef<HTMLDivElement | null>(null);
+    const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+    const userInteracted = useRef(false);
 
+    useEffect(() => {
+        const scrollingContent = scrollingContentRef.current;
 
+        const startScrolling = () => {
+            scrollIntervalRef.current = setInterval(() => {
+                if (scrollingContent) {
+                    scrollingContent.scrollTop += 1;
+                    if (scrollingContent.scrollTop + scrollingContent.clientHeight >= scrollingContent.scrollHeight) {
+                        scrollingContent.scrollTop = 0;
+                    }
+                }
+            }, 50);
+        };
+
+        const stopScrolling = () => {
+            if (scrollIntervalRef.current) {
+                clearInterval(scrollIntervalRef.current);
+            }
+        };
+
+        const handleUserInteraction = () => {
+            userInteracted.current = true;
+            stopScrolling();
+        };
+
+        if (scrollingContent) {
+            scrollingContent.addEventListener('mouseenter', stopScrolling);
+            scrollingContent.addEventListener('mouseleave', () => {
+                if (!userInteracted.current) startScrolling();
+            });
+            scrollingContent.addEventListener('wheel', handleUserInteraction);
+            scrollingContent.addEventListener('touchstart', handleUserInteraction);
+        }
+
+        startScrolling();
+
+        return () => {
+            if (scrollingContent) {
+                scrollingContent.removeEventListener('mouseenter', stopScrolling);
+                scrollingContent.removeEventListener('mouseleave', () => {
+                    if (!userInteracted.current) startScrolling();
+                });
+                scrollingContent.removeEventListener('wheel', handleUserInteraction);
+                scrollingContent.removeEventListener('touchstart', handleUserInteraction);
+            }
+            stopScrolling();
+        };
+    }, []);
 
     return (
-        <div className={styles.painel} id="scrolling-content">
+        <div className={styles.painel} ref={scrollingContentRef}>
             {/* Painel 1 */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>
