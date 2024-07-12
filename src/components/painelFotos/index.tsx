@@ -18,8 +18,11 @@ import foto11 from '@/assets/11.jpg';
 import foto12 from '@/assets/12.jpg';
 
 export function PainelFotos() {
+
+
+
     return (
-        <div className={styles.painel}>
+        <div className={styles.painel} id="scrolling-content">
             {/* Painel 1 */}
             <div className={styles.coluna}>
                 <div className={styles.foto1x1}>

@@ -8,6 +8,7 @@ import { RedesSociais } from "@/components/redesSociais";
 
 export default function Home() {
   return (
+
     <div>
 
       <div className={styles.container} >
